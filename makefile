@@ -1,6 +1,6 @@
 all :: build
 
-project_py	=	python project.py
+project_py	=	python project.py -t CLANG9PE
 
 build ::
 	$(project_py)

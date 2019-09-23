@@ -54,7 +54,13 @@ if __name__ == '__main__':
     import sys
     sys.dont_write_bytecode = True      # To inhibit the creation of .pyc file
 
-    os.environ['CLANG9PE_BIN']='/usr/lib/llvm-8/bin/'
+    if os.name == 'nt':
+        #os.environ['CLANG_HOST_BIN']='n'
+        #os.environ['CLANG9PE_BIN']='C:\\Program Files\\LLVM9\\bin\\'
+        #os.environ['IASL_PREFIX']='c:\\Asl\\'
+        pass
+    else:
+        os.environ['CLANG9PE_BIN']='/usr/bin/'
 
     PKG_DSC = 'OvmfPkg/OvmfPkgX64.dsc'
     IPUG_CMD = 'ipug -p {0} {1}'.format(PKG_DSC, ' '.join(sys.argv[1:]))
