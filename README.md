@@ -1,4 +1,4 @@
-# ArmVirtPkg.pug
+# edk2-clang9.pug
 Build EDK2 packages using CLANG9/LLVM9
 
 ## Prerequisites:
